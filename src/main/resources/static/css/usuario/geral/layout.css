@@ -1,0 +1,116 @@
+body{
+  display:flex;
+  min-height:100vh;
+}
+
+.container-menu{
+  background:#f5f5f5;
+  border-right:1px solid #ccc;
+  height:100%;
+  width:220px;
+  position:fixed;
+  top:0;
+  left:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  z-index:100;
+}
+
+.menu-links,.menu-login{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.menu-login{
+  padding:14px 20px;
+  border-bottom:1px solid #ccc;
+}
+
+.p-login-cadastro,.p-login-sair{
+  font-size:14px;
+  line-height:1.6;
+}
+
+.a-login-cadastro{
+  cursor:pointer;
+  text-decoration:underline;
+}
+
+.p-login-sair{display:none}
+.usuario-logado{font-size:14px}
+
+.menu-links{
+  padding:12px 0;
+  gap:2px;
+  flex:1;
+}
+
+.item-menu{
+  width:calc(100% - 16px);
+  height:44px;
+  display:flex;
+  align-items:center;
+  cursor:pointer;
+  padding:0 12px;
+  gap:12px;
+  margin:0 8px;
+}
+.item-menu:hover{background:#e5e5e5}
+
+.img-menu{width:32px;height:32px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.icon-menu{width:22px;filter:invert(1)}
+.texto-menu{font-size:14px}
+
+.sidebar-version{
+  padding:16px 20px;
+  border-top:1px solid #ccc;
+  margin-top:auto;
+  width:100%;
+}
+.sidebar-version p{font-size:12px;color:#666}
+
+.input-menu{display:none}
+.sobreposicao-menu{
+  width:100%;
+  height:100vh;
+  position:fixed;
+  z-index:99;
+  background:rgba(0,0,0,0.5);
+  left:-100%;
+}
+.margem-sair{position:fixed;top:50%;right:-20%}
+
+.container-conteudo{
+  margin-left:220px;
+  width:calc(100% - 220px);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  min-height:100vh;
+}
+
+.hamburger-btn{
+  width:38px;
+  height:38px;
+  border:1px solid #888;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  flex-shrink:0;
+}
+.hamburger-btn svg{width:18px;height:18px;stroke:#000}
+
+@media(max-width:900px){
+  .input-menu[type="checkbox"]:checked~.container-menu{transform:translateX(220px)}
+  .input-menu[type="checkbox"]:checked~.sobreposicao-menu{left:0}
+  .container-menu{left:-220px}
+  .container-conteudo{margin-left:0;width:100%}
+  .icon-abrir-menu,.icon-abrir-menu-md,.icon-fechar-menu{display:flex}
+  .icon-fechar-menu{margin-left:auto}
+  .hamburger-btn{display:flex}
+}

@@ -1,0 +1,4 @@
+sdk.dir=C\:\\Users\\SEU_USUARIO\\AppData\\Local\\Android\\Sdk
+# URL do backend (sempre terminar com /). Padrão: emulador -> http://10.0.2.2:8080/
+# Celular físico na mesma rede Wi-Fi: use o IP do PC, ex.:
+# API_BASE_URL=http://192.168.0.10:8080/

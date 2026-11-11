@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        style="@style/TextoRotulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/forma_pagamento" />
+
+    <Spinner
+        android:id="@+id/forma"
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+
+    <TextView
+        style="@style/TextoRotulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/parcelas" />
+
+    <Spinner
+        android:id="@+id/parcelas"
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+
+    <TextView
+        style="@style/TextoRotulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/endereco_entrega" />
+
+    <TextView
+        android:id="@+id/endereco"
+        style="@style/TextoValor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/total"
+        style="@style/TextoPreco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp" />
+</LinearLayout>

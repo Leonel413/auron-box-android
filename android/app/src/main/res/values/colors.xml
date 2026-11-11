@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="preto">#000000</color>
+    <color name="branco">#FFFFFF</color>
+    <color name="cinza_claro">#EEEEEE</color>
+    <color name="cinza_fundo">#F5F5F5</color>
+    <color name="cinza_borda">#888888</color>
+    <color name="cinza_linha">#CCCCCC</color>
+    <color name="cinza_texto">#666666</color>
+    <color name="sucesso">#1A6B1A</color>
+    <color name="perigo">#B00020</color>
+    <color name="aviso">#E08A00</color>
+    <color name="ic_launcher_background">#000000</color>
+</resources>

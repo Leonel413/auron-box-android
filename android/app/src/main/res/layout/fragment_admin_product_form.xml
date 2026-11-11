@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/conteudo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/nome_produto">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapSentences"
+                    android:maxLength="50" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutDescricao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="@string/descricao">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/descricao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:maxLength="400"
+                    android:minLines="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView style="@style/TextoRotulo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/categoria" />
+            <Spinner android:id="@+id/categoria" android:layout_width="match_parent" android:layout_height="48dp" />
+
+            <TextView style="@style/TextoRotulo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/marca" />
+            <Spinner android:id="@+id/marca" android:layout_width="match_parent" android:layout_height="48dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutModelo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="@string/modelo">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/modelo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapSentences"
+                    android:maxLength="80" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView style="@style/TextoRotulo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/cor" />
+            <Spinner android:id="@+id/cor" android:layout_width="match_parent" android:layout_height="48dp" />
+
+            <TextView style="@style/TextoRotulo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/garantia" />
+            <Spinner android:id="@+id/garantia" android:layout_width="match_parent" android:layout_height="48dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="@string/especificacoes_tecnicas">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/especificacoes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_especificacoes"
+                    android:inputType="textMultiLine"
+                    android:maxLength="1000"
+                    android:minLines="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutPromocao"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:hint="@string/desconto">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/promocao"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="3" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutEstoque"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:hint="@string/qtd_estoque">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/estoque"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="6" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutValor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="@string/valor_reais">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/valor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:maxLength="12" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView style="@style/TextoRotulo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/imagem" />
+
+            <ImageView
+                android:id="@+id/preview"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginTop="4dp"
+                android:contentDescription="@string/cd_imagem_produto"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/imagemNome"
+                style="@style/TextoRotulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="normal" />
+
+            <Button
+                android:id="@+id/btnImagem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/escolher_imagem" />
+
+            <Button
+                android:id="@+id/btnSalvar"
+                style="@style/BotaoPrimario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/salvar" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/state"
+        layout="@layout/layout_state"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/preto"
+        android:visibility="gone" />
+</FrameLayout>

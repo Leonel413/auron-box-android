@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="categorias">
+        <item>Smartphones</item>
+        <item>Notebooks</item>
+        <item>Monitores</item>
+        <item>Periféricos</item>
+        <item>Games</item>
+        <item>Acessórios</item>
+    </string-array>
+    <string-array name="ordenacao">
+        <item>Ordenar</item>
+        <item>Menor preço</item>
+        <item>Maior preço</item>
+    </string-array>
+    <string-array name="estados_uf">
+        <item>AC</item><item>AL</item><item>AP</item><item>AM</item><item>BA</item><item>CE</item>
+        <item>DF</item><item>ES</item><item>GO</item><item>MA</item><item>MT</item><item>MS</item>
+        <item>MG</item><item>PA</item><item>PB</item><item>PR</item><item>PE</item><item>PI</item>
+        <item>RJ</item><item>RN</item><item>RS</item><item>RO</item><item>RR</item><item>SC</item>
+        <item>SP</item><item>SE</item><item>TO</item>
+    </string-array>
+    <string-array name="form_categorias">
+        <item>Escolha</item>
+        <item>Smartphones</item>
+        <item>Notebooks</item>
+        <item>Monitores</item>
+        <item>Periféricos</item>
+        <item>Games</item>
+        <item>Acessórios</item>
+    </string-array>
+    <string-array name="form_marcas">
+        <item>Escolha</item>
+        <item>Samsung</item>
+        <item>Apple</item>
+        <item>Sony</item>
+        <item>LG</item>
+        <item>Dell</item>
+        <item>Lenovo</item>
+        <item>Asus</item>
+        <item>Xiaomi</item>
+        <item>Microsoft</item>
+        <item>Logitech</item>
+        <item>Outra</item>
+    </string-array>
+    <string-array name="form_cores">
+        <item>Preto</item>
+        <item>Branco</item>
+        <item>Prata</item>
+        <item>Azul</item>
+        <item>Grafite</item>
+        <item>Dourado</item>
+        <item>Roxo</item>
+        <item>Verde</item>
+        <item>Vermelho</item>
+    </string-array>
+    <string-array name="form_garantias">
+        <item>3 meses</item>
+        <item>6 meses</item>
+        <item>12 meses</item>
+        <item>18 meses</item>
+        <item>2 anos</item>
+    </string-array>
+    <string-array name="filtro_pedidos">
+        <item>Pendentes</item>
+        <item>Confirmadas</item>
+        <item>Recusadas</item>
+    </string-array>
+    <string-array name="formas_pagamento">
+        <item>PIX</item>
+        <item>Boleto</item>
+        <item>Cartão de Crédito</item>
+    </string-array>
+</resources>

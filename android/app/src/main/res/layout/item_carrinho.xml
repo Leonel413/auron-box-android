@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/imagem"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:contentDescription="@string/cd_imagem_produto"
+            android:scaleType="fitCenter" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titulo"
+                style="@style/TextoNormal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/descricao"
+                style="@style/TextoRotulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/cor"
+                style="@style/TextoRotulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/precoUnitario"
+                style="@style/TextoValor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnRemover"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/remover_item"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_x" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="104dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="12dp">
+
+        <Button
+            android:id="@+id/btnMenos"
+            android:layout_width="44dp"
+            android:layout_height="40dp"
+            android:insetLeft="0dp"
+            android:insetRight="0dp"
+            android:minWidth="0dp"
+            android:padding="0dp"
+            android:text="@string/menos" />
+
+        <TextView
+            android:id="@+id/quantidade"
+            style="@style/TextoPreco"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/btnMais"
+            android:layout_width="44dp"
+            android:layout_height="40dp"
+            android:insetLeft="0dp"
+            android:insetRight="0dp"
+            android:minWidth="0dp"
+            android:padding="0dp"
+            android:text="@string/mais" />
+
+        <TextView
+            android:id="@+id/subtotal"
+            style="@style/TextoPreco"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end" />
+    </LinearLayout>
+
+    <View style="@style/Divisor" />
+</LinearLayout>

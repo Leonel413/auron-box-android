@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView android:id="@+id/nome" style="@style/TextoNormal" android:layout_width="match_parent" android:layout_height="wrap_content" android:textStyle="bold" />
+        <TextView android:id="@+id/marcaModelo" style="@style/TextoValor" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/cinza_texto" />
+        <TextView android:id="@+id/detalhes" style="@style/TextoRotulo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:textStyle="normal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnEditar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                android:text="@string/editar" />
+
+            <Button
+                android:id="@+id/btnExcluir"
+                style="@style/BotaoPerigo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:text="@string/excluir" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/Divisor" />
+</LinearLayout>

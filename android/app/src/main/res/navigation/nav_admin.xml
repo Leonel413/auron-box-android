@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_admin"
+    app:startDestination="@id/adminMenuFragment">
+
+    <fragment
+        android:id="@+id/adminMenuFragment"
+        android:name="com.auronbox.app.ui.admin.AdminMenuFragment"
+        android:label="@string/area_admin" />
+    <fragment
+        android:id="@+id/adminProductsFragment"
+        android:name="com.auronbox.app.ui.admin.AdminProductsFragment"
+        android:label="@string/adm_produtos" />
+    <fragment
+        android:id="@+id/adminProductFormFragment"
+        android:name="com.auronbox.app.ui.admin.AdminProductFormFragment"
+        android:label="@string/adm_produto" />
+    <fragment
+        android:id="@+id/adminOrdersFragment"
+        android:name="com.auronbox.app.ui.admin.AdminOrdersFragment"
+        android:label="@string/adm_pedidos" />
+    <fragment
+        android:id="@+id/orderDetailFragment"
+        android:name="com.auronbox.app.ui.orders.OrderDetailFragment"
+        android:label="@string/titulo_pedido" />
+    <fragment
+        android:id="@+id/adminUsersFragment"
+        android:name="com.auronbox.app.ui.admin.AdminUsersFragment"
+        android:label="@string/adm_usuarios" />
+</navigation>

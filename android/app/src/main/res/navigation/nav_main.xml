@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.auronbox.app.ui.home.HomeFragment"
+        android:label="@string/app_name" />
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.auronbox.app.ui.detail.ProductDetailFragment"
+        android:label="@string/titulo_produto" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.auronbox.app.ui.cart.CartFragment"
+        android:label="@string/titulo_carrinho" />
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="com.auronbox.app.ui.orders.OrdersFragment"
+        android:label="@string/titulo_pedidos" />
+    <fragment
+        android:id="@+id/orderDetailFragment"
+        android:name="com.auronbox.app.ui.orders.OrderDetailFragment"
+        android:label="@string/titulo_pedido" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.auronbox.app.ui.profile.ProfileFragment"
+        android:label="@string/titulo_perfil" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.auronbox.app.ui.profile.LoginFragment"
+        android:label="@string/titulo_login" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.auronbox.app.ui.profile.RegisterFragment"
+        android:label="@string/titulo_cadastro" />
+    <fragment
+        android:id="@+id/addressFragment"
+        android:name="com.auronbox.app.ui.profile.AddressFragment"
+        android:label="@string/titulo_endereco" />
+    <fragment
+        android:id="@+id/passwordFragment"
+        android:name="com.auronbox.app.ui.profile.PasswordFragment"
+        android:label="@string/titulo_senha" />
+
+    <action
+        android:id="@+id/action_global_loginFragment"
+        app:destination="@id/loginFragment" />
+</navigation>

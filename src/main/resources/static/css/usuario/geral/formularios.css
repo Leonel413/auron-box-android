@@ -1,0 +1,153 @@
+.container-formulario{
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.5);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:fixed;
+  top:0;left:0;
+  opacity:0;
+  z-index:-1;
+}
+
+.container-formulario.ativo{
+  opacity:1;
+  z-index:200;
+}
+
+.form-cadastro{
+  width:580px;
+  max-height:90vh;
+  overflow-y:auto;
+  background:#fff;
+  border:1px solid #888;
+  position:relative;
+}
+
+.cadastro-titulo{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:16px 20px;
+  border-bottom:1px solid #ccc;
+}
+
+.cadastro-titulo-texto{
+  font-size:20px;
+  font-weight:bold;
+}
+
+.btn-limpar{
+  width:34px;height:34px;
+  padding:0;
+  display:flex;align-items:center;justify-content:center;
+}
+.btn-limpar img{width:16px;filter:invert(1)}
+
+.step{
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.divisor,.divisor-1,.divisor-2{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.label-form-cadastro{
+  font-size:13px;
+  font-weight:bold;
+}
+
+.input-form-cadastro-1,.input-form-cadastro-2,
+.input-form-cadastro-3,.input-form-cadastro-4,
+.input-form-cadastro-5,.input-form-cadastro-senha{
+  height:36px;
+  width:100%;
+}
+
+.input-form-cadastro-2{width:60%}
+.input-form-cadastro-3{width:40%}
+.input-form-cadastro-4{width:65%}
+
+.margem-data-nascimento{
+  display:flex;
+  gap:10px;
+}
+.input-form-cadastro-5{width:auto;flex:1}
+
+.linha-cep{display:flex;gap:10px}
+.btn-cep{height:36px;padding:0 16px}
+
+.linha-senha-cadastro{position:relative;width:100%}
+.input-form-cadastro-senha{width:100%;padding-right:40px}
+
+.divisor-1,.divisor-2{display:inline-flex;flex-direction:column;gap:6px}
+.divisor-1{width:35%;margin-right:10px}
+.divisor-2{width:60%}
+
+.footer-form-cadastro{
+  display:flex;
+  gap:12px;
+  justify-content:flex-end;
+  padding:16px 20px;
+  border-top:1px solid #ccc;
+}
+
+.btn-cadastro,.btn-voltar{
+  height:36px;
+  padding:0 20px;
+}
+
+.form-login{
+  width:420px;
+  background:#fff;
+  border:1px solid #888;
+}
+
+.div-form-login{
+  padding:24px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.login-header{margin-bottom:8px}
+
+.login-title{
+  font-size:22px;
+  font-weight:bold;
+  display:block;
+  margin-bottom:4px;
+}
+
+.login-sub{font-size:13px;color:#555}
+
+.linha-login{
+  height:40px;
+  display:flex;
+  align-items:center;
+  position:relative;
+}
+
+.input-form-login{
+  width:100%;
+  height:100%;
+  padding:0 40px 0 10px;
+}
+
+.footer-form-login{padding:0 24px 24px}
+
+.btn-login{
+  width:100%;
+  height:40px;
+}
+
+@media(max-width:600px){
+  .form-cadastro,.form-login{width:95vw}
+  .divisor-1,.divisor-2{width:100%}
+}

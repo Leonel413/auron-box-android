@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/conteudo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/breadcrumb"
+                style="@style/TextoRotulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/imagem"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@string/cd_imagem_produto"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/badge"
+                style="@style/TextoRotulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_borda"
+                android:paddingStart="8dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="4dp" />
+
+            <TextView
+                android:id="@+id/nome"
+                style="@style/TextoTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/marcaModelo"
+                style="@style/TextoValor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/cinza_texto" />
+
+            <TextView
+                android:id="@+id/descricao"
+                style="@style/TextoValor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:id="@+id/estoque"
+                style="@style/TextoValor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/sucesso" />
+
+            <TextView
+                android:id="@+id/preco"
+                style="@style/TextoTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="26sp" />
+
+            <TextView
+                android:id="@+id/garantia"
+                style="@style/TextoValor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/tituloSpecs"
+                style="@style/TextoTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/especificacoes_tecnicas"
+                android:textSize="16sp" />
+
+            <TableLayout
+                android:id="@+id/specs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:shrinkColumns="1" />
+
+            <Button
+                android:id="@+id/btnAdicionar"
+                style="@style/BotaoPrimario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/adicionar_carrinho" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/state"
+        layout="@layout/layout_state"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/deslogado"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_perfil" />
+
+        <TextView
+            style="@style/TextoNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/faca_login_perfil" />
+
+        <Button
+            android:id="@+id/btnEntrar"
+            style="@style/BotaoPrimario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/entrar" />
+
+        <Button
+            android:id="@+id/btnCriarConta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/criar_conta" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/logado"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_perfil" />
+
+                <TextView
+                    android:id="@+id/nome"
+                    style="@style/TextoTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/TextoTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/dados_pessoais"
+                android:textSize="16sp" />
+
+            <View style="@style/Divisor" />
+
+            <LinearLayout
+                android:id="@+id/dadosPessoais"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <TextView
+                style="@style/TextoTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/dados_endereco"
+                android:textSize="16sp" />
+
+            <View style="@style/Divisor" />
+
+            <LinearLayout
+                android:id="@+id/dadosEndereco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <Button
+                android:id="@+id/btnEndereco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/alterar_endereco" />
+
+            <Button
+                android:id="@+id/btnSenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/alterar_senha" />
+
+            <Button
+                android:id="@+id/btnAdmin"
+                style="@style/BotaoPrimario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/area_admin"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnSair"
+                style="@style/BotaoPerigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/sair" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/state"
+        layout="@layout/layout_state"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>

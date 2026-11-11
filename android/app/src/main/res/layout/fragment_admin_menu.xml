@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:id="@+id/cardProdutos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_borda"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageView android:layout_width="48dp" android:layout_height="48dp" android:contentDescription="@null" android:src="@drawable/ic_product" />
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:layout_weight="1" android:orientation="vertical">
+            <TextView style="@style/TextoTitulo" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/adm_produtos" android:textSize="17sp" />
+            <TextView style="@style/TextoValor" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/adm_produtos_desc" android:textColor="@color/cinza_texto" android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cardPedidos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_borda"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageView android:layout_width="48dp" android:layout_height="48dp" android:contentDescription="@null" android:src="@drawable/ic_pedido_adm" />
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:layout_weight="1" android:orientation="vertical">
+            <TextView style="@style/TextoTitulo" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/adm_pedidos" android:textSize="17sp" />
+            <TextView style="@style/TextoValor" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/adm_pedidos_desc" android:textColor="@color/cinza_texto" android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cardUsuarios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_borda"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageView android:layout_width="48dp" android:layout_height="48dp" android:contentDescription="@null" android:src="@drawable/ic_user" />
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:layout_weight="1" android:orientation="vertical">
+            <TextView style="@style/TextoTitulo" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/adm_usuarios" android:textSize="17sp" />
+            <TextView style="@style/TextoValor" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/adm_usuarios_desc" android:textColor="@color/cinza_texto" android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

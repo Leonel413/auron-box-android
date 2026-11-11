@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho — Auron Box</title>
+
+
+  <link rel="stylesheet" href="css/ambos/variaveis-templates.css">
+  <link rel="stylesheet" href="css/ambos/messageBox.css">
+  <link rel="stylesheet" href="css/usuario/geral/layout.css">
+  <link rel="stylesheet" href="css/usuario/geral/header-footer.css">
+  <link rel="stylesheet" href="css/usuario/geral/formularios.css">
+  <link rel="stylesheet" href="css/usuario/especifico/carrinho.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous" defer></script>
+  <script src="js/ambos/geral.js" defer></script>
+  <script src="js/usuario/formularios.js" defer></script>
+  <script src="js/usuario/index.js" defer></script>
+  <script src="js/usuario/pedidos.js" defer></script>
+  <script src="js/usuario/carrinho.js" defer></script>
+
+</head>
+
+<body>
+  <input type="checkbox" class="input-menu" id="abrirMenu">
+  <div class="sobreposicao-menu"></div>
+
+  <nav class="container-menu">
+    <div class="menu-login" id="nomeUsuario">
+      <p class="usuario-logado" id="estadoUSuario"></p>
+    </div>
+    <div class="menu-links">
+      <a class="item-menu" href="index.html">
+        <div class="img-menu"><img src="icon/iconCasa.png" class="icon-menu"></div>
+        <div class="texto-menu">Home</div>
+      </a>
+      <a class="item-menu" onclick="abrirMeusDados()">
+        <div class="img-menu"><img src="icon/user-dados.png" class="icon-menu"></div>
+        <div class="texto-menu">Meus dados</div>
+      </a>
+      <a class="item-menu" onclick="abrirMeusPedidos()">
+        <div class="img-menu"><img src="icon/pedido.png" class="icon-menu"></div>
+        <div class="texto-menu">Meus pedidos</div>
+      </a>
+      <a class="item-menu" href="carrinho.html">
+        <div class="img-menu"><img src="icon/carrinho-menu.png" class="icon-menu"></div>
+        <div class="texto-menu">Carrinho</div>
+      </a>
+    </div>
+    <div class="sidebar-version">
+      <p>© 2026 Auron Box</p>
+    </div>
+    <div class="margem-sair">
+      <label for="abrirMenu"><img src="icon/esconder.png" class="icon-fechar-menu"></label>
+    </div>
+  </nav>
+
+  <main class="container-conteudo">
+    <header class="cabecalho">
+      <nav class="nav-atalhos">
+        <label for="abrirMenu" class="hamburger-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </label>
+        <a href="index.html" class="nome-loja">Auron Box</a>
+      </nav>
+      <div class="nav-atalhos">
+        <a href="index.html" class="link-voltar">Continuar comprando</a>
+        <a class="aCarrinho" href="carrinho.html">
+          <img src="icon/carrinho-carrinho.png" width="28px">
+          <p class="quantidade-carrinho" id="quantidade-carrinho">0</p>
+        </a>
+      </div>
+    </header>
+
+    <div class="container-carrinho">
+      <!-- Items -->
+      <div class="div-carrinho">
+        <div class="header-carrinho">
+          <div class="part-header-1">
+            <img src="icon/carrinho-carrinho.png" width="24px">
+            <p class="titulo-carrinho">Carrinho de compras</p>
+          </div>
+          <div class="part-header-2">
+            <button class="btn-excluir" onclick="excluir()"><img src="icon/lixo.png" width="14px"></button>
+          </div>
+        </div>
+        <table class="itens-carrinho" id="itensCarrinho"></table>
+      </div>
+
+      <!-- Summary -->
+      <div class="div-resumo">
+        <p class="titulo-resumo">Resumo do pedido</p>
+        <div class="linha-resumo">
+          <span class="texto-resumo">Subtotal</span>
+          <span class="valor-resumo" id="subtotal">R$ 0,00</span>
+        </div>
+        <div class="linha-total">
+          <span class="texto-resumo">Total</span>
+          <span class="valor-total" id="totalCarrinho">R$ 0,00</span>
+        </div>
+        <button class="btn-finalizar" onclick="finalizarCompra()">Finalizar pedido</button>
+      </div>
+    </div>
+
+  </main>
+
+  <div class="container-formulario" id="containerFormulario">
+    <img src="icon/esconder.png" class="icon-esconder" onclick="fecharFormulario()">
+    <form class="form-login" id="login" name="formulario">
+      <div class="div-form-login">
+        <div class="login-header">
+          <span class="login-title">Entrar</span>
+          <span class="login-sub">Entre para finalizar o pedido</span>
+        </div>
+        <div class="linha-login">
+          <input class="input-form-login" type="email" placeholder="seu@email.com" id="email" name="inputLogin">
+          <img src="icon/user.png" class="icon-input">
+        </div>
+        <div class="linha-login">
+          <input class="input-form-login" type="password" placeholder="Senha" id="senha" name="inputLogin">
+          <img src="icon/olho.png" class="icon-input" id="trocarInputLogin">
+        </div>
+      </div>
+      <footer class="footer-form-login">
+        <button type="button" class="btn-login" id="btnLogin" onclick="fazerLogin()" disabled>Entrar</button>
+      </footer>
+    </form>
+  </div>
+
+  <div class="esconderMessageBox" id="esconder">
+    <div class="message-box" id="mensagem">
+      <div class="texto-message-box" id="textoMensagem"></div>
+      <footer class="footer-message-box" id="btnMensagem">
+        <button class="btn-message-box" id="btnMessage" onclick="fecharMessageBox()">Ok</button>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Modal de finalizar pedido -->
+  <div class="esconderMessageBox" id="esconderModal" style="display:none">
+    <div class="message-box">
+      <div class="texto-message-box">
+        <h2>Finalizar Pedido</h2>
+
+        <p>Forma de pagamento</p>
+        <select id="formaPagamento">
+          <option value="PIX">PIX</option>
+          <option value="Boleto">Boleto</option>
+          <option value="Cartão de Crédito">Cartão de Crédito</option>
+        </select>
+
+        <div id="divParcelas">
+          <p>Parcelas</p>
+          <select id="quantidadeParcelas">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="6">6x</option>
+            <option value="12">12x</option>
+          </select>
+        </div>
+
+        <p>Total: <span id="modalTotal"></span></p>
+        <p>Valor da parcela: <span id="modalParcela"></span></p>
+      </div>
+      <footer class="footer-message-box">
+        <button onclick="fecharModal()">Cancelar</button>
+        <button onclick="confirmarPedido()">Confirmar</button>
+      </footer>
+    </div>
+  </div>
+
+</body>
+</html>
