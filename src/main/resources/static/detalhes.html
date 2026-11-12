@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhe do Produto</title>
+
+
+  <link rel="stylesheet" href="css/ambos/variaveis-templates.css">
+  <link rel="stylesheet" href="css/ambos/messageBox.css">
+  <link rel="stylesheet" href="css/usuario/geral/layout.css">
+  <link rel="stylesheet" href="css/usuario/geral/header-footer.css">
+  <link rel="stylesheet" href="css/usuario/especifico/detalhes.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+          integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+          crossorigin="anonymous" defer></script>
+  <script src="js/ambos/geral.js" defer></script>
+  <script src="js/usuario/carrinho.js" defer></script>
+  <script src="js/usuario/detalhes.js" defer></script>
+
+</head>
+
+<body>
+<input type="checkbox" class="input-menu" id="abrirMenu">
+<div class="sobreposicao-menu"></div>
+
+<!-- Sidebar -->
+<nav class="container-menu">
+  <div class="menu-login" id="nomeUsuario">
+    <p class="usuario-logado" id="estadoUSuario"></p>
+  </div>
+  <div class="menu-links">
+    <a class="item-menu" href="index.html">
+      <div class="img-menu"><img src="icon/iconCasa.png" class="icon-menu"></div>
+      <div class="texto-menu">Home</div>
+    </a>
+    <a class="item-menu" onclick="abrirMeusDados()">
+      <div class="img-menu"><img src="icon/user-dados.png" class="icon-menu"></div>
+      <div class="texto-menu">Meus dados</div>
+    </a>
+    <a class="item-menu" onclick="abrirMeusPedidos()">
+      <div class="img-menu"><img src="icon/pedido.png" class="icon-menu"></div>
+      <div class="texto-menu">Meus pedidos</div>
+    </a>
+    <a class="item-menu" href="carrinho.html">
+      <div class="img-menu"><img src="icon/carrinho-menu.png" class="icon-menu"></div>
+      <div class="texto-menu">Carrinho</div>
+    </a>
+  </div>
+  <div class="sidebar-version"><p>© 2026 Auron Box</p></div>
+  <div class="margem-sair">
+    <label for="abrirMenu"><img src="icon/esconder.png" class="icon-fechar-menu"></label>
+  </div>
+</nav>
+
+<main class="container-conteudo">
+  <header class="cabecalho">
+    <nav class="nav-atalhos">
+      <label for="abrirMenu" class="hamburger-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </label>
+      <a href="index.html" class="nome-loja">Auron Box</a>
+    </nav>
+    <div class="nav-atalhos">
+      <a class="aCarrinho" href="carrinho.html">
+        <img src="icon/carrinho-carrinho.png" width="28px">
+        <p class="quantidade-carrinho" id="quantidade-carrinho">0</p>
+      </a>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb">
+    <a href="index.html">Home</a>
+    <span>›</span>
+    <span id="breadcrumbCategoria">Produto</span>  <!-- preenchido pelo JS -->
+    <span>›</span>
+    <span id="breadcrumbNome">Detalhe</span>        <!-- preenchido pelo JS -->
+  </nav>
+
+  <!-- Detalhe do produto -->
+  <div class="container-detalhes">
+
+    <!-- Imagem -->
+    <div class="div-img-detalhes">
+      <img id="imgCamisa" class="img-detalhes">
+    </div>
+
+    <!-- Informações -->
+    <div class="div-info-detalhes">
+
+      <!-- Badge de categoria — era fixo "Camisa tailandesa" -->
+      <span class="badge-categoria" id="badgeCategoria"></span>
+
+      <!-- Nome do produto -->
+      <h1 class="nome-produto-detalhe" id="descricao"></h1>
+
+      <!-- Marca e modelo -->
+      <p class="info-secundaria">
+        <span id="marcaInfo"></span> — <span id="modeloInfo"></span>
+      </p>
+
+      <!-- Descrição -->
+      <p class="desc-detalhes" id="descricaoLonga"></p>
+
+      <!-- Estoque -->
+      <p class="info-secundaria" id="estoqueInfo">Em estoque</p>
+
+      <!-- Preço -->
+      <div class="valores-detalhes">
+        <div class="valor-desconto-detalhes">
+          R$ <span id="valorComDesconto"></span>
+        </div>
+      </div>
+
+      <!-- Garantia -->
+      <p class="info-secundaria">Garantia: <span id="garantiaInfo"></span></p>
+
+      <!-- Especificações técnicas — novo, era inexistente -->
+      <details>
+        <summary>
+          Especificações técnicas
+        </summary>
+        <table class="specs-table">
+          <tbody id="specsBody"></tbody>
+        </table>
+      </details>
+
+      <!-- Botão adicionar ao carrinho -->
+      <button class="btn-add-detalhe" id="adcionaItem">
+        Adicionar ao carrinho
+      </button>
+    </div>
+  </div>
+
+</main>
+
+<div class="esconderMessageBox" id="esconder">
+  <div class="message-box" id="mensagem">
+    <div class="texto-message-box" id="textoMensagem"></div>
+    <footer class="footer-message-box" id="btnMensagem">
+      <button class="btn-message-box" id="btnMessage" onclick="fecharMessageBox()">Ok</button>
+    </footer>
+  </div>
+</div>
+
+</body>
+</html>
