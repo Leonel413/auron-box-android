@@ -82,12 +82,6 @@ CREATE TABLE `pedidos` (
 -- Dumping data for table `pedidos`
 --
 
-LOCK TABLES `pedidos` WRITE;
-/*!40000 ALTER TABLE `pedidos` DISABLE KEYS */;
-INSERT INTO `pedidos` VALUES (1,'61982511713',1,'07002231189','23/05/2026   19:19:54','ianleonelt06@gmail.com','72620153, DF, Brasília, Recanto das Emas, Quadra 300 Conjunto 52, 726201, casa branca e dourada','ALTO CUSTO','Ian Leonel Teles de Sousa',311686862,'PIX',3,1,'Pedido negado',9401.99,9401.99),(2,'61982511713',1,'07002231189','23/05/2026   23:08:17','ianleonelt06@gmail.com','72620153, DF, Brasília, Recanto das Emas, Quadra 300 Conjunto 52, 726201, casa branca e dourada','Confirmado','Ian Leonel Teles de Sousa',389559632,'PIX',3,1,'Pedido negado',12984.98,12984.98),(3,'61982511713',1,'07002231189','23/05/2026   23:08:33','ianleonelt06@gmail.com','72620153, DF, Brasília, Recanto das Emas, Quadra 300 Conjunto 52, 726201, casa branca e dourada','Confirmado','Ian Leonel Teles de Sousa',371258942,'PIX',5,1,'Pedido negado',16986.98,16986.98),(52,'61982511713',1,'07002231189','24/05/2026   13:16:21','ianleonelt06@gmail.com','72620153, DF, Brasília, Recanto das Emas, Quadra 300 Conjunto 52, 726201, casa branca e dourada',NULL,'Ian Leonel Teles de Sousa',721631233,'PIX',2,1,'Pedido confirmado',9239.991,9239.991),(102,'61982511713',1,'07002231189','25/05/2026   21:02:05','ianleonelt06@gmail.com','72620153, DF, Brasília, Recanto das Emas, Quadra 300 Conjunto 52, 726201, casa branca e dourada',NULL,'Ian Leonel Teles de Sousa',482610525,'PIX',4,1,'Pedido confirmado',7907.09,7907.09);
-/*!40000 ALTER TABLE `pedidos` ENABLE KEYS */;
-UNLOCK TABLES;
-
 --
 -- Table structure for table `pedidos_seq`
 --
@@ -235,13 +229,6 @@ CREATE TABLE `usuarios` (
 --
 -- Dumping data for table `usuarios`
 --
-
-LOCK TABLES `usuarios` WRITE;
-/*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,_binary '','Recanto das Emas','61982511713','72620153','Brasília','casa branca e dourada','07002231189','13/03/2002','ianleonelt06@gmail.com','DF','Ian Leonel Teles de Sousa',726201,0,'ROLE_ADMIN','Quadra 300 Conjunto 52','$2a$10$qP6mtvZrXJ.xKOq0RWNUuutmDsEc/XfLJa5O7aUqrR5qJ8OnjldbS',0);
-/*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
-UNLOCK TABLES;
-
 --
 -- Table structure for table `usuarios_seq`
 --
